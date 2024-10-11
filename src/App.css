@@ -1,0 +1,141 @@
+/* App.css */
+
+/* Color scheme */
+:root {
+  --primary-bg: #ffffff; /* White background */
+  --secondary-bg: #f7f9fc; /* Slightly off-white for inner sections */
+  --primary-color: #1f4b99;
+  --secondary-color: #4a90e2;
+  --text-color: #333;
+  --border-color: #ccc;
+  --input-bg: #f7f9fc;
+  --input-focus: #4a90e2;
+  --button-bg: #007BFF;
+  --button-hover: #0056b3;
+  --label-color: #1f4b99;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full screen height */
+  width: 100%; /* Full-screen width */
+  background-color: var(--primary-bg);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.form-wrapper {
+  width: 95%; /* Occupies more of the screen width */
+  max-width: 1400px; /* Increased max-width for larger screen coverage */
+  background-color: var(--primary-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.section {
+  margin-bottom: 40px; /* Increased spacing */
+  padding: 25px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: var(--secondary-bg);
+}
+
+h3 {
+  color: var(--primary-color);
+  margin-bottom: 20px; /* More space for clarity */
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; /* Increased space between rows */
+  gap: 15px;
+}
+
+label {
+  flex: 0 0 170px; /* Slightly wider label width */
+  color: var(--label-color);
+  margin-right: 10px;
+  text-align: right;
+}
+
+input[type="text"], input[type="date"], textarea {
+  flex: 1;
+  padding: 15px; /* Larger padding for inputs */
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 16px; /* Slightly larger font */
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus, input[type="date"]:focus, textarea:focus {
+  border-color: var(--input-focus);
+  outline: none;
+  background-color: #ffffff;
+}
+
+textarea {
+  resize: none;
+  height: 120px; /* Adjusted height */
+}
+
+input, textarea {
+  max-width: 100%; /* Prevent inputs from exceeding container width */
+}
+
+button {
+  display: inline-block;
+  padding: 15px 25px; /* Larger buttons */
+  background-color: var(--button-bg);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .form-wrapper {
+    width: 100%; /* Full-width on small screens */
+    padding: 20px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  label {
+    text-align: left;
+    margin-bottom: 5px;
+  }
+}
